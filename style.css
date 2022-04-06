@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(136, 127, 127) ;
+}
+
+
+.Data{
+    max-width: 400px; 
+    height: 250px;
+    background-color: rgb(71, 68, 68);
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto; 
+}
+
+.Data form{
+    max-width: 500px;
+  align-items: center;
+    padding: 20px;
+    margin: 30px 60px;
+    width: 100%;
+    line-height: 4.0;
+}
+
+.Data input{
+    height: 30px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Data button{
+ height: 25px;
+ width: 17%;
+ border-radius: 5px;
+ border: none;
+ margin: 15px 70px;
+
+
+}
+.container{
+    border: 2px solid rgb(255, 246, 246);
+    width: 400px;
+    min-height: 300px;
+    position: absolute;
+    transform: translateY(-50%,-50%);
+    top: 30%;
+    left: 30%;
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+
+#newtask{
+    position: relative;
+    background-color: #ffff;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+#newtask input{
+    width: 70%;
+    height: 15px;
+    font-family: sans-serif;
+    font-size: 12px;
+    border: 1px solid;
+    padding: 12px;
+    color: rgb(26, 29, 29);
+    font-weight: 400;
+    position: relative;
+}
+
+#newtask button{
+    position: relative;
+   float: right;
+   width: 20%;
+   height:25px;
+   border-radius: 4px;
+   font-family: sans-serif;
+   font-weight: 300;
+   font-size: 12px;
+   background-color: rgb(120, 118, 128);
+   border: none;
+   color: rgb(26, 29, 29);
+}
+
+#newtask button:hover{
+    background-color: rgb(78, 78, 87);
+    transition: 2s ease-in;
+    cursor: pointer;
+}
+
+#tasks{
+    background-color: #ffff;
+    padding: 30px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+}
+
+.task{
+    background-color: #ffffff;
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(44, 41, 41);
+    cursor: pointer;
+}
+
+.task span{
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.task button{
+    background-color: grey;
+    color: rgb(26, 29, 29);
+    height: 60%;
+    width: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.footer{
+    width: 100%;
+    align-items: center;
+    margin: 30px;
+    justify-content: space-between;
+    font-size: auto;
+    color:rgb(26, 29, 29)
+}
+
+.footer span{
+    font-weight: 300;
+    font-size: 18px;
+}
+.footer button{
+    margin-left: 10px;
+    border-radius: 3px;
+    border: none;
+    width: 18%;
+    background-color: grey;
+    cursor: pointer;
+}
