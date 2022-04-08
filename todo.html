@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
     <title>Todo</title>
-</head>
-<body onload="todoLoaded">
+  </head>
+  <body onload="todoLoaded()">
     <div class="container">
-        <div id="newtask">
-            <input type="text" placeholder="Task to be done">
-            <button id="push">Add</button>
-        </div>
-        <div id="tasks"></div>
-        <div class="footer">
-            <span>You have <span class="pendingNumb"></span> pending tasks</span>
-            <button>Clear All</button>
-        </div>
+      <div id="newtask">
+        <input type="text" placeholder="Task to be done" />
+        <button id="push">Add</button>
+      </div>
+      <div id="tasks"></div>
+      <div class="footer">
+        <span>You have <span class="pendingNumb"></span> pending tasks</span>
+        <button>Clear All</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

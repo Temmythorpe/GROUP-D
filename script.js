@@ -1,37 +1,41 @@
-const form = document.querySelector("#form")
-const todoUsername = "todo_username"
+const form = document.querySelector("#form");
+const todoUsername = "todo_username";
 
-document.addEventListener('load', () => console.log('loaded'))
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault()
+if (form != null)
+  form.addEventListener("submit", (e) => {
+    try {
+      e.preventDefault();
 
-//     const username = document.getElementById("username").value
-//     const password = document.getElementById("password").value
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
 
-//     localStorage.setItem(todoUsername, username)
+      localStorage.setItem(todoUsername, username);
 
-//     window.location.href = "/todo.html"
-// })
+      window.location.href = "/todo.html";
+    } catch (error) {
+      console.log(error);
+    }
+  });
 
-
-function todoLoaded(){
-    const username = localStorage.getItem(todoUsername)
-    alert('Welcome ${username}')
+function todoLoaded() {
+  const username = localStorage.getItem(todoUsername);
+  alert(`Welcome ${username}`);
 }
 
+const push = document.querySelector("#push");
 
-document.querySelector('#push').onclick = function
- (){
-    if(document.querySelector('#newtask input').
-    value.length == 0){
-        alert("Please Enter a Task")
-    }
-    else{
-        document.querySelector('#tasks').innerHTML
-        += `
+var pendingNumb = document.querySelector(".pendingNumb");
+var todo_count = 0;
+
+if (push)
+  push.onclick = function () {
+    if (document.querySelector("#newtask input").value.length == 0) {
+      alert("Please Enter a Task");
+    } else {
+      document.querySelector("#tasks").innerHTML += `
         <div class="task">
             <span id="taskname">
-            ${document.querySelector('#newtask input').value}
+            ${document.querySelector("#newtask input").value}
         </span>
         <button class="delete">
         <i class='bx bxs-trash'></i>
@@ -39,27 +43,24 @@ document.querySelector('#push').onclick = function
         </div>
         `;
 
-        var current_tasks = document.
-        querySelectorAll(".delete");
-        for(var i=0; i<current_tasks.length; i++){
-            current_tasks[i].onclick = function(){
-                this.parentNode.remove();
-            }
-        }
-        
-        var tasks = document.querySelectorAll(".task");
-            for(var i=0; i<tasks.length; i++){
-                tasks[i].onclick = function(){
-                    this.classList.toggle('completed');
-                }
-            }
+      todo_count += 1;
 
-            document.querySelector("#newtask input").
-            value = "";
+      var current_tasks = document.querySelectorAll(".delete");
+      for (var i = 0; i < current_tasks.length; i++) {
+        current_tasks[i].onclick = function () {
+          this.parentNode.remove();
+        };
+      }
 
+      var tasks = document.querySelectorAll(".task");
+      for (var i = 0; i < tasks.length; i++) {
+        tasks[i].onclick = function () {
+          this.classList.toggle("completed");
+        };
+      }
 
-            var pendingNumb = document.querySelector(".pendingNumb");
-            pendingNumb.textContent = i.length; 
+      document.querySelector("#newtask input").value = "";
+
+      pendingNumb.textContent = todo_count;
     }
-}
-
+  };
