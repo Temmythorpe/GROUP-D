@@ -1,3 +1,25 @@
+const form = document.querySelector("#form")
+const todoUsername = "todo_username"
+
+document.addEventListener('load', () => console.log('loaded'))
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault()
+
+//     const username = document.getElementById("username").value
+//     const password = document.getElementById("password").value
+
+//     localStorage.setItem(todoUsername, username)
+
+//     window.location.href = "/todo.html"
+// })
+
+
+function todoLoaded(){
+    const username = localStorage.getItem(todoUsername)
+    alert('Welcome ${username}')
+}
+
+
 document.querySelector('#push').onclick = function
  (){
     if(document.querySelector('#newtask input').
@@ -40,3 +62,4 @@ document.querySelector('#push').onclick = function
             pendingNumb.textContent = i.length; 
     }
 }
+
